@@ -60,6 +60,10 @@ Spork.each_run do
 
 end
 
+# Automatically keeps test database in sync with schema
+# so as not to call rake test:prepare
+# ActiveRecord::Migration.maintain_test_schema!
+
 # --- Instructions ---
 # Sort the contents of this file into a Spork.prefork and a Spork.each_run
 # block.
